@@ -1,1 +1,1 @@
-include ':app', ':s01_transact'
+include ':app', ':s01_transact', ':s10_preview'
