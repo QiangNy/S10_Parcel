@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/write_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="写入数据" />
+
+    <Button
+        android:id="@+id/read_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/write_db"
+        android:layout_marginTop="15dp"
+        android:text="读取数据" />
+
+    <Button
+        android:id="@+id/update_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/read_db"
+        android:layout_marginTop="15dp"
+        android:text="更新数据"/>
+    <Button
+        android:id="@+id/delet_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update_db"
+        android:layout_marginTop="15dp"
+        android:text="删除数据"/>
+
+    <TextView
+        android:id="@+id/write_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/write_db"
+        android:layout_toRightOf="@id/write_db"
+        android:hint="this data will be writen"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/read_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/read_db"
+        android:layout_toRightOf="@id/read_db"
+        android:hint="show data at here"
+        android:textSize="25sp" />
+</RelativeLayout>

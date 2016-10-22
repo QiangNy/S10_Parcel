@@ -1,5 +1,6 @@
-package ludeng.com.s10_parcel;
+package ludeng.com.s10_parcel.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import ludeng.com.s10_parcel.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,30 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         parcel = Parcel.obtain();
 
-      /*  button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                parcel.writeString("abc");
-                parcel.writeInt(123);
-                parcel.writeFloat(1.0f);
-            }
-        });
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                parcel.setDataPosition(0);
-
-                String str = parcel.readString();
-                int i = parcel.readInt();
-                float f = parcel.readFloat();
-
-                Log.i("S10_Parcel","str = " + str + "  i = " + i + "   f = " + f);
-            }
-        });*/
     }
 
     @OnClick({R.id.button1, R.id.button2})
@@ -64,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 parcel.writeString("abc");
                 parcel.writeInt(123);
                 parcel.writeFloat(1.0f);
+
+                startActivity(new Intent(this,SecondActivity.class));
+
                 break;
             case R.id.button2:
                 Log.i("S10_Parcel", "button2");
